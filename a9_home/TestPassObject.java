@@ -1,0 +1,24 @@
+package a9_home;
+
+public class TestPassObject {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CircleWithPrivateDataFields myCircle=
+				new CircleWithPrivateDataFields(1);
+		int n=5;
+		printAreas(myCircle,n);
+		System.out.println("\n"+"Radius"+myCircle.getRadius());
+		System.out.println("n is "+n);
+	}
+	public static void printAreas(
+			CircleWithPrivateDataFields c,int times) {
+		System.out.println("Radiuis /t/tArea");
+		while(times>=1)
+		{
+		System.out.println(c.getRadius()+"\t\t"+c.getArea());
+		c.setRadius(c.getRadius()+1);
+		times--;
+		}
+	}
+}
